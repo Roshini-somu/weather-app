@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background">
+    <canvas id="particleCanvas"></canvas>
+    <div class="gradient"></div>
+  </div>
+
+  <div class="container">
+    <h1>Weather App</h1>
+    <div>
+      <input type="text" id="cityInput" placeholder="Enter city name">
+      <button onclick="fetchWeatherByCity()">Search</button>
+      <button onclick="fetchWeatherByLocation()">Use My Location</button>
+    </div>
+    <div class="spinner" id="spinner" style="display: none;"></div>
+    <div class="weather-info" id="weatherInfo">
+      <div class="weather-card">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon" class="icon" src="" alt="Weather Icon">
+        <p id="description"></p>
+        <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+        <p><strong>Feels Like:</strong> <span id="feelsLike"></span>°C</p>
+        <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+        <p><strong>Wind Speed:</strong> <span id="wind"></span> m/s</p>
+        <p><strong>Sunrise:</strong> <span id="sunrise"></span></p>
+        <p><strong>Sunset:</strong> <span id="sunset"></span></p>
+      </div>
+    </div>
+    <div class="error" id="error"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
